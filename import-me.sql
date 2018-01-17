@@ -12,6 +12,28 @@ VALUES
 	(2,'25 Felton Road, Slacks Creek QLD 4127');
 
 
+
+-- Dump of table users
+
+CREATE TABLE `users` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(100) NOT NULL DEFAULT '',
+  `last_name` varchar(100) NOT NULL DEFAULT '',
+  `gender` tinyint(1) unsigned NOT NULL,
+  `date_of_birth` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `gender`, `date_of_birth`)
+VALUES
+	(1,'Jenny','Carter',2,'1999-05-07'),
+	(2,'Matthew','Carter',1,'1993-08-24'),
+	(3,'Mark','Carter',1,'1970-01-22'),
+	(4,'Victoria','Carter',2,'1972-09-01'),
+	(5,'Marcus','Ive',1,'1980-08-31'),
+	(6,'Nicki','Ive',2,'1985-12-12');
+
+
 -- Dump of table transactions
 
 CREATE TABLE `transactions` (
@@ -57,25 +79,3 @@ VALUES
 	(4,1),
 	(5,2),
 	(6,2);
-
-
-
--- Dump of table users
-
-CREATE TABLE `users` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(100) NOT NULL DEFAULT '',
-  `last_name` varchar(100) NOT NULL DEFAULT '',
-  `gender` tinyint(1) unsigned NOT NULL,
-  `date_of_birth` date NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `gender`, `date_of_birth`)
-VALUES
-	(1,'Jenny','Carter',2,'1999-05-07'),
-	(2,'Matthew','Carter',1,'1993-08-24'),
-	(3,'Mark','Carter',1,'1970-01-22'),
-	(4,'Victoria','Carter',2,'1972-09-01'),
-	(5,'Marcus','Ive',1,'1980-08-31'),
-	(6,'Nicki','Ive',2,'1985-12-12');
